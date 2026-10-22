@@ -4,16 +4,12 @@ from models.conexion import ConexionDB
 
 
 class seguridad_datos:
-    # Tabla SEGURIDAD_DATOS: id_seguridad (PK), id_empleado (FK a TRABAJADOR, único),
-    # datos_personales_cifrados (SHA-256 en hexadecimal, 64 caracteres)
-    #
-    # Se trabaja con los datos en texto (self.datos_personales) y la clase los convierte
-    # con cifrarDatos() antes de guardarlos. En la base de datos solo queda el hash.
+
     def __init__(self, id_seguridad=None, id_empleado=None, datos_personales=None):
         self.id_seguridad = id_seguridad
         self.id_empleado = id_empleado
-        self.datos_personales = datos_personales     # texto plano, solo en memoria
-        self.datos_personales_cifrados = None        # lo que se guarda en la BD
+        self.datos_personales = datos_personales 
+        self.datos_personales_cifrados = None  
 
     def __str__(self):
         return (f"ID seguridad: {self.id_seguridad} | ID empleado: {self.id_empleado} | "
@@ -21,8 +17,7 @@ class seguridad_datos:
 
     @staticmethod
     def cifrarDatos(texto):
-        # Mismo formato que RAWTOHEX(STANDARD_HASH(..., 'SHA256')) de Oracle (mayúsculas).
-        # Es un hash: no se puede "descifrar", solo comparar contra otro texto.
+
         return hashlib.sha256(texto.encode("utf-8")).hexdigest().upper()
 
     # ---------- CONSULTA ----------
@@ -30,7 +25,6 @@ class seguridad_datos:
         c = None
         try:
             c = ConexionDB()
-            # Se muestran solo los primeros 16 caracteres del hash
             c.cursor.execute(
                 """SELECT ID_SEGURIDAD, ID_EMPLEADO,
                           SUBSTR(DATOS_PERSONALES_CIFRADOS, 1, 16) || '...'
@@ -72,8 +66,6 @@ class seguridad_datos:
         c = None
         try:
             c = ConexionDB()
-            # Si se escribieron datos nuevos se vuelve a calcular el hash;
-            # si no, se conserva el que se cargó con cargarPorID_seguridad_datos.
             if self.datos_personales:
                 self.datos_personales_cifrados = self.cifrarDatos(self.datos_personales)
 
