@@ -2,8 +2,7 @@ from models.conexion import ConexionDB
 
 
 class inicio_sesion:
-    # Tabla INICIO_SESION: id_sesion (PK), id_autenticacion (FK a AUTENTICACION), correo,
-    # fecha_hora (formato DD-MM-YYYY HH:MM), exitoso ('S' = login correcto, 'N' = fallido)
+
     def __init__(self, id_sesion=None, id_autenticacion=None, correo=None,
                  fecha_hora=None, exitoso=None):
         self.id_sesion = id_sesion
