@@ -1,0 +1,29 @@
+Administradores (acceso a las 12 tablas con todas las operaciones)
+
+ID|	Nombre	         |Usuario	                        | Contraseña
+-------------------------------------------------------------------
+1 |	Carolina Fuentes |	carolina.fuentes@ecotech.cl   |	Clave1#2024
+2	| Rodrigo Miranda  |	rodrigo.miranda@ecotech.cl	  | Clave2#2024
+3 |	Patricia Soto	   |  patricia.soto@ecotech.cl	    | Clave3#2024
+4 |	Andrés Valdés	   |  andres.valdes@ecotech.cl	    | Clave4#2024
+5 |	Marcela Rojas	   |  marcela.rojas@ecotech.cl	    | Clave5#2024
+6 |	Sebastián Muñoz	 |  sebastian.munoz@ecotech.cl	  | Clave6#2024
+7 |	Daniela Vargas	 |  daniela.vargas@ecotech.cl	    | Clave7#2024
+8 |	Camila Herrera	 |  camila.herrera@ecotech.cl	    | Clave8#2024
+9 |	Francisca Lagos	 |  francisca.lagos@ecotech.cl	  | Clave9#2024
+10|	Tomás Espinoza	 |  tomas.espinoza@ecotech.cl	    | Clave10#2024
+
+Empleados (solo consulta en 6 tablas)
+
+ID|	Nombre	         | Usuario	                      | Contraseña
+--------------------------------------------------------------------
+11|	Felipe Contreras |  felipe.contreras@ecotech.cl	  | Clave11#2024
+12|	Valentina Araya  | 	valentina.araya@ecotech.cl	  | Clave12#2024
+13|	Matías Pizarro	 |  matias.pizarro@ecotech.cl	    | Clave13#2024
+14|	Javiera Bravo	   |  javiera.bravo@ecotech.cl	    | Clave14#2024
+15|	Nicolás Castro	 |  nicolas.castro@ecotech.cl	    | Clave15#2024
+16|	Constanza Reyes	 |  constanza.reyes@ecotech.cl	  | Clave16#2024
+17|	Benjamín Ortiz	 |  benjamin.ortiz@ecotech.cl	    | Clave17#2024
+18|	Antonia Silva	   |  antonia.silva@ecotech.cl	    | Clave18#2024
+19|	Diego Carrasco	 |  diego.carrasco@ecotech.cl	    | Clave19#2024
+20|	Ignacio Tapia	   |  ignacio.tapia@ecotech.cl	    | Clave20#2024
